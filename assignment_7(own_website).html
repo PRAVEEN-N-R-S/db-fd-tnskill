@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sports Academy Website</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f2f6f9;
+        }
+
+        /* ===== MENU BAR ===== */
+        nav {
+            background-color: #1f4e79;
+            padding: 12px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* ===== HEADER ===== */
+        header {
+            text-align: center;
+            padding: 30px;
+            background-color: white;
+        }
+
+        header h1 {
+            color: #1f4e79;
+        }
+
+        /* ===== SECTION ===== */
+        section {
+            padding: 30px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #1f4e79;
+        }
+
+        /* ===== IMAGE GALLERY ===== */
+        .gallery {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .gallery img {
+            width: 250px;
+            height: 160px;
+            border-radius: 8px;
+        }
+
+        /* ===== FORM ===== */
+        form {
+            width: 60%;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin: 8px 0;
+        }
+
+        input[type="submit"] {
+            background-color: #1f4e79;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #163a59;
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background-color: #1f4e79;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- MENU BAR -->
+<nav>
+    <a href="#home">Home</a>
+    <a href="#sports">Sports</a>
+    <a href="#register">Register</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<!-- HOME SECTION -->
+<header id="home">
+    <h1>Jeichuru_Maaraa Sports Academy</h1>
+    <p>Building Champions for Tomorrow</p>
+</header>
+
+<!-- SPORTS SECTION -->
+<section id="sports">
+    <h2>Our Sports</h2>
+    <div class="gallery">
+        <img src="https://media.istockphoto.com/id/680888958/photo/sporting-women-practicing-fencing-sport-women-in-sport-young-woman-fencer-standing-in-fencing.jpg?s=2048x2048&w=is&k=20&c=yyn9jG-QCEMzvm5x4roWz-R7abaf-kp0_YuyuLYWpqo=" alt="Fencing">
+        <img src="https://images.unsplash.com/photo-1517649763962-0c623066013b" alt="Cricket">
+        <img src="https://images.unsplash.com/photo-1546519638-68e109498ffc" alt="Badminton">
+    </div>
+</section>
+
+<!-- REGISTRATION FORM -->
+<section id="register">
+   <h2>Student Registration Form</h2>
+
+    <form>
+        Full Name:
+        <input type="text" required>
+
+        Age:
+        <input type="number">
+
+        Gender:
+        <select>
+            <option>Male</option>
+            <option>Female</option>
+        </select>
+
+        Sport Interested:
+        <select>
+            <option>Cricket</option>
+            <option>Football</option>
+            <option>Badminton</option>
+        </select>
+
+        Mobile Number:
+        <input type="tel">
+
+        Email:
+        <input type="email">
+
+        Address:
+        <textarea rows="3"></textarea>
+
+        <input type="submit" value="Register">
+    </form>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+    <h2>Contact Us</h2>
+    <p style="text-align:center;">
+        📍 Madurai <br>
+        📞 636908**** <br>
+        ✉️ Fencing.sportsacademy@email.com
+    </p>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    © 2026 Jeichuru_Maaraa Sports Academy
+</footer>
+
+</body>
+</html>

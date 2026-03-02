@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Looping</title>
+</head>
+<body>
+
+<h3>JavaScript Looping Demo</h3>
+
+Enter a number:
+<input type="number" id="num">
+<button onclick="showLoop()">Show Loop</button>
+
+<p id="output"></p>
+
+<script>
+function showLoop() {
+    let n = Number(document.getElementById("num").value);
+    let result = "";
+
+    // FOR loop
+    result += "<b>For Loop:</b><br>";
+    for (let i = 1; i <= n; i++) {
+        result += i + " ";
+    }
+
+    result += "<br><br><b>While Loop:</b><br>";
+
+    // WHILE loop
+    let j = 1;
+    while (j <= n) {
+        result += j + " ";
+        j++;
+    }
+
+    result += "<br><br><b>Do While Loop:</b><br>";
+
+    // DO-WHILE loop
+    let k = 1;
+    do {
+        result += k + " ";
+        k++;
+    } while (k <= n);
+
+    document.getElementById("output").innerHTML = result;
+}
+</script>
+
+</body>
+</html>

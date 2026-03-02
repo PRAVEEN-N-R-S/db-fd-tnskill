@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Bouncing Ball Animation</title>
+
+<style>
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background: #f2f2f2;
+        font-family: Arial, sans-serif;
+    }
+
+    /* Container box */
+    .box {
+        width: 250px;
+        height: 250px;
+        border: 3px solid #333;
+        position: relative;
+        background-color: #fff;
+        overflow: hidden;
+    }
+
+    /* Common ball style */
+    .ball {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        position: absolute;
+    }
+
+    /* Vertical bouncing ball */
+    .ball-vertical {
+        background-color: crimson;
+        left: 50px;
+        animation: bounce-vertical 2s infinite ease-in-out;
+    }
+
+    /* Horizontal moving ball */
+    .ball-horizontal {
+        background-color: dodgerblue;
+        top: 150px;
+        animation: move-horizontal 2s infinite linear;
+    }
+
+    /* Keyframes */
+    @keyframes bounce-vertical {
+        0%   { top: 0; }
+        50%  { top: 210px; }
+        100% { top: 0; }
+    }
+
+    @keyframes move-horizontal {
+        0%   { left: 0; }
+        50%  { left: 210px; }
+        100% { left: 0; }
+    }
+</style>
+</head>
+
+<body>
+
+<div class="box">
+    <div class="ball ball-vertical"></div>
+    <div class="ball ball-horizontal"></div>
+</div>
+
+</body>
+</html>

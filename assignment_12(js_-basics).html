@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Basics & Fundamentals</title>
+</head>
+<body>
+
+<h2>JavaScript Basics Demo</h2>
+
+Enter a number:
+<input type="number" id="num1"><br><br>
+
+Enter another number:
+<input type="number" id="num2"><br><br>
+
+<button onclick="runJS()">Run JavaScript</button>
+
+<p id="output"></p>
+
+<script>
+function runJS() {
+
+    // Variables & Data Types
+    let a = Number(document.getElementById("num1").value);
+    let b = Number(document.getElementById("num2").value);
+    let name = "JavaScript";
+
+    let result = "";
+
+    // Arithmetic Operators
+    result += "<b>Addition:</b> " + (a + b) + "<br>";
+    result += "<b>Subtraction:</b> " + (a - b) + "<br>";
+    result += "<b>Multiplication:</b> " + (a * b) + "<br>";
+    result += "<b>Division:</b> " + (a / b) + "<br><br>";
+
+    // Conditional Statement (if-else)
+    if (a > b) {
+        result += "Condition: a is greater than b<br>";
+    } else if (a < b) {
+        result += "Condition: b is greater than a<br>";
+    } else {
+        result += "Condition: a and b are equal<br>";
+    }
+
+    // Loop (for loop)
+    result += "<br><b>For Loop:</b><br>";
+    for (let i = 1; i <= 5; i++) {
+        result += i + " ";
+    }
+
+    // Function
+    result += "<br><br><b>Function Call Result:</b> " + greet(name);
+
+    // Output to HTML
+    document.getElementById("output").innerHTML = result;
+}
+
+// Function Definition
+function greet(text) {
+    return "Hello, " + text + "!";
+}
+</script>
+
+</body>
+</html>
+

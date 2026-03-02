@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Form Validation with Events</title>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background: #f20707;
+}
+
+.container {
+    width: 400px;
+    margin: 60px auto;
+    background: rgb(242, 242, 130);
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px #f79898;
+}
+
+h2 {
+    text-align: center;
+}
+
+input, select {
+    width: 100%;
+    padding: 8px;
+    margin: 8px 0;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background: #0a7eeb;
+    color: rgb(209, 255, 131);
+    border: none;
+    cursor: pointer;
+}
+
+.error {
+    color: red;
+    font-size: 13px;
+}
+
+.success {
+    color: green;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+<h2>Form</h2>
+
+<form id="myForm" onsubmit="return validateForm()">
+
+    <!-- Name -->
+    <input type="text" id="name" placeholder="Full Name"
+           onfocus="highlight(this)"
+           onblur="checkName()"
+           onkeyup="liveName()" >
+    <div id="nameError" class="error"></div>
+
+    <!-- Email -->
+    <input type="email" id="email" placeholder="Email"
+           onblur="checkEmail()" >
+    <div id="emailError" class="error"></div>
+
+    <!-- Age -->
+    <input type="number" id="age" placeholder="Age"
+           onchange="checkAge()" >
+    <div id="ageError" class="error"></div>
+
+    <!-- Gender -->
+    <select id="gender" onchange="checkGender()" >
+        <option value="">Select Gender</option>
+        <option>Male</option>
+        <option>Female</option>
+    </select>
+    <div id="genderError" class="error"></div>
+
+    <!-- Password -->
+    <input type="password" id="password" placeholder="Password"
+           onblur="checkPassword()" >
+    <div id="passError" class="error"></div>
+
+    <button type="submit" onclick="submitClick()">Register</button>
+
+</form>
+</div>
+
+<script>
+
+/* onfocus event */
+function highlight(element) {
+    element.style.background = "#e6f2ff";
+}
+
+/* onblur event */
+function checkName() {
+    let name = document.getElementById("name").value;
+    if (name.length < 4) {
+        document.getElementById("nameError").innerHTML =
+            "Name must be at least 4 characters";
+        return false;
+    } else {
+        document.getElementById("nameError").innerHTML = "";
+        return true;
+    }
+}
+
+/* onkeyup event */
+function liveName() {
+    let name = document.getElementById("name").value;
+    document.getElementById("nameError").innerHTML =
+        "Typing: " + name;
+}
+
+/* Email validation */
+function checkEmail() {
+    let email = document.getElementById("email").value;
+    if (!email.includes("@gmail.com")) {
+        document.getElementById("emailError").innerHTML =
+            "Invalid Email or type gmail.com";
+        return false;
+    } else {
+        document.getElementById("emailError").innerHTML = "";
+        return true;
+    }
+}
+
+/* onchange event */
+function checkAge() {
+    let age = document.getElementById("age").value;
+    if (age < 18) {
+        document.getElementById("ageError").innerHTML =
+            "Age must be 18 or above";
+        return false;
+    } else {
+        document.getElementById("ageError").innerHTML = "";
+        return true;
+    }
+}
+
+/* Gender validation */
+function checkGender() {
+    let gender = document.getElementById("gender").value;
+    if (gender === "") {
+        document.getElementById("genderError").innerHTML =
+            "Please select gender";
+        return false;
+    } else {
+        document.getElementById("genderError").innerHTML = "";
+        return true;
+    }
+}
+
+/* Password validation */
+function checkPassword() {
+    let pass = document.getElementById("password").value;
+    if (pass.length < 12) {
+        document.getElementById("passError").innerHTML =
+            "Password must be at least 12 characters";
+        return false;
+    } else {
+        document.getElementById("passError").innerHTML = "";
+        return true;
+    }
+}
+
+/* onclick event */
+function submitClick() {
+    alert("Submit button clicked!");
+}
+
+/* onsubmit event */
+function validateForm() {
+    if (checkName() && checkEmail() && checkAge() && 
+        checkGender() && checkPassword()) {
+        alert("Form Submitted Successfully!");
+        return true;
+    } else {
+        alert("Please correct the errors before submitting");
+        return false;
+    }
+}
+
+</script>
+
+</body>
+</html>

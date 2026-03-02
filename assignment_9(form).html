@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Form creation assignment</title>
+
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(to right, #141e30, #243b55);
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .form-container {
+        width: 900px;
+        background: #ffffff;
+        border-radius: 12px;
+        box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+        overflow: hidden;
+    }
+
+    .form-header {
+        background: url("https://images.unsplash.com/photo-1769406525591-619fd06c678a?q=80&w=1481&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D") center/cover;
+        padding: 30px;
+        color: white;
+        text-align: center;
+    }
+
+    .form-header h1 {
+        margin: 0;
+        font-size: 32px;
+        letter-spacing: 1px;
+    }
+
+    .form-header p {
+        margin-top: 8px;
+        opacity: 0.9;
+    }
+
+    form {
+        padding: 30px;
+    }
+
+    .section-title {
+        font-size: 20px;
+        margin-bottom: 15px;
+        color: #243b55;
+        border-left: 5px solid #243b55;
+        padding-left: 10px;
+    }
+
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .field {
+        flex: 1 1 280px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .field label {
+        font-weight: 600;
+        margin-bottom: 5px;
+        color: #333;
+    }
+
+    .field input,
+    .field select,
+    .field textarea {
+        padding: 10px;
+        border-radius: 6px;
+        border: 1px solid #ccc;
+        font-size: 14px;
+    }
+
+    .field textarea {
+        resize: none;
+        height: 80px;
+    }
+
+    .radio-group,
+    .checkbox-group {
+        display: flex;
+        gap: 15px;
+        margin-top: 5px;
+    }
+
+    .radio-group label,
+    .checkbox-group label {
+        font-weight: normal;
+    }
+
+    .buttons {
+        text-align: center;
+        margin-top: 25px;
+    }
+
+    .buttons input {
+        padding: 12px 30px;
+        border: none;
+        border-radius: 25px;
+        font-size: 15px;
+        cursor: pointer;
+        margin: 10px;
+        color: white;
+        background: linear-gradient(to right, #141e30, #243b55);
+    }
+
+    .buttons input:hover {
+        opacity: 0.9;
+    }
+
+</style>
+</head>
+
+<body>
+
+<div class="form-container">
+
+    <div class="form-header">
+        <h1>Biodata Registration Form</h1>
+        <p>Personal | Educational | Professional Information</p>
+    </div>
+
+    <form>
+
+        <!-- Personal Information -->
+        <div class="section-title">Personal Information</div>
+        <div class="row">
+            <div class="field">
+                <label>Full Name</label>
+                <input type="text">
+            </div>
+
+            <div class="field">
+                <label>Date of Birth</label>
+                <input type="date">
+            </div>
+
+            <div class="field">
+                <label>Age</label>
+                <input type="number">
+            </div>
+
+            <div class="field">
+                <label>Gender</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="gender"> Male</label>
+                    <label><input type="radio" name="gender"> Female</label>
+                    <label><input type="radio" name="gender"> Other</label>
+                </div>
+            </div>
+
+            <div class="field">
+                <label>Nationality</label>
+                <input type="text">
+            </div>
+
+            <div class="field">
+                <label>Marital Status</label>
+                <select>
+                    <option>Single</option>
+                    <option>Married</option>
+                </select>
+            </div>
+
+            <div class="field">
+                <label>Blood Group</label>
+                <select>
+                    <option>A+</option><option>B+</option>
+                    <option>O+</option><option>AB+</option>
+                </select>
+            </div>
+
+            <div class="field">
+                <label>Religion</label>
+                <input type="text">
+            </div>
+        </div>
+
+        <!-- Contact Details -->
+        <div class="section-title">Contact Details</div>
+        <div class="row">
+            <div class="field">
+                <label>Mobile Number</label>
+                <input type="tel">
+            </div>
+
+            <div class="field">
+                <label>Email Address</label>
+                <input type="email">
+            </div>
+
+            <div class="field">
+                <label>Address</label>
+                <textarea></textarea>
+            </div>
+
+            <div class="field">
+                <label>City</label>
+                <input type="text">
+            </div>
+
+            <div class="field">
+                <label>State</label>
+                <input type="text">
+            </div>
+
+            <div class="field">
+                <label>Country</label>
+                <input type="text">
+            </div>
+        </div>
+
+        <!-- Education & Skills -->
+        <div class="section-title">Education & Skills</div>
+        <div class="row">
+            <div class="field">
+                <label>Highest Qualification</label>
+                <input type="text">
+            </div>
+
+            <div class="field">
+                <label>Profession</label>
+                <input type="text">
+            </div>
+
+            <div class="field">
+                <label>Languages Known</label>
+                <div class="checkbox-group">
+                    <label><input type="checkbox"> English</label>
+                    <label><input type="checkbox"> Hindi</label>
+                    <label><input type="checkbox"> Tamil</label>
+                </div>
+            </div>
+
+            <div class="field">
+                <label>Hobbies</label>
+                <input type="text">
+            </div>
+
+            <div class="field">
+                <label>Upload Photo</label>
+                <input type="file">
+            </div>
+        </div>
+
+        <!-- Buttons -->
+        <div class="buttons">
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+        </div>
+
+    </form>
+
+</div>
+
+</body>
+</html>

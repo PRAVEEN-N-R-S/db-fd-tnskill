@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Sports Academy Website</title>
+
+<style>
+/* ===== GENERAL ===== */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f2f2f2;
+}
+
+/* ===== MENU BAR ===== */
+.menu {
+    background: #1f4e79;
+    padding: 12px;
+    display: flex;
+    align-items: center;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+.menu a:hover {
+    text-decoration: underline;
+}
+
+.logo {
+    width: 40px;
+    margin-right: 20px;
+}
+
+/* ===== SECTIONS ===== */
+.section {
+    padding: 40px;
+    text-align: center;
+}
+
+.home {
+    background: linear-gradient(to right, #141e30, #243b55);
+    color: white;
+}
+
+.home button {
+    padding: 12px 25px;
+    border: none;
+    background: orange;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* ===== GALLERY ===== */
+.gallery {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.gallery img {
+    width: 250px;
+    height: 160px;
+    border-radius: 10px;
+    border: 3px solid #ccc;
+}
+
+/* ===== FORM ===== */
+.form-section {
+    background: #ffffff;
+}
+
+.form-box {
+    width: 650px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.form-box input,
+.form-box select,
+.form-box textarea {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.form-box textarea {
+    grid-column: span 2;
+    height: 80px;
+}
+
+.form-box button {
+    grid-column: span 2;
+    padding: 12px;
+    background: #1f4e79;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+/* ===== ANIMATION ===== */
+.box {
+    width: 400px;
+    height: 220px;
+    border: 3px solid #333;
+    margin: auto;
+    position: relative;
+    background: white;
+}
+
+.ball {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.vertical {
+    background: crimson;
+    left: 40px;
+    animation: updown 2s infinite;
+}
+
+.horizontal {
+    background: dodgerblue;
+    top: 150px;
+    animation: leftright 3s infinite;
+}
+
+@keyframes updown {
+    0% { top: 0; }
+    50% { top: 180px; }
+    100% { top: 0; }
+}
+
+@keyframes leftright {
+    0% { left: 0; }
+    50% { left: 360px; }
+    100% { left: 0; }
+}
+</style>
+</head>
+
+<body>
+
+<!-- MENU -->
+<div class="menu">
+    
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#register">Register</a>
+    <a href="#animation">Animation</a>
+</div>
+
+<!-- HOME -->
+<div id="home" class="section home">
+    <h1>Elite Sports Academy</h1>
+    <p>Train Hard • Stay Fit • Achieve Excellence</p>
+    <button>Join Now</button>
+</div>
+
+<!-- ABOUT -->
+<div id="about" class="section">
+    <h2>About Us</h2>
+    <p>
+        Elite Sports Academy provides professional coaching,
+        physical fitness training, and skill development
+        for young athletes.
+    </p>
+</div>
+
+<!-- GALLERY -->
+<div id="gallery" class="section">
+    <h2>Sports Gallery</h2>
+    <div class="gallery">
+        <img src="https://images.unsplash.com/photo-1521412644187-c49fa049e84d">
+        <img src="https://images.unsplash.com/photo-1508609349937-5ec4ae374ebf">
+        <img src="https://images.unsplash.com/photo-1517649763962-0c623066013b">
+    </div>
+</div>
+
+<!-- REGISTRATION FORM -->
+<div id="register" class="section form-section">
+    <h2>Student Registration Form</h2>
+
+    <form class="form-box">
+        <input type="text" placeholder="Full Name">
+        <input type="date">
+        <input type="number" placeholder="Age">
+
+        <select>
+            <option>Gender</option>
+            <option>Male</option>
+            <option>Female</option>
+            <option>Other</option>
+        </select>
+
+        <input type="text" placeholder="Nationality">
+        <input type="text" placeholder="Blood Group">
+        <input type="tel" placeholder="Mobile Number">
+        <input type="email" placeholder="Email Address">
+        <input type="text" placeholder="City">
+        <input type="text" placeholder="State">
+        <input type="text" placeholder="Country">
+
+        <select>
+            <option>Sport Interested</option>
+            <option>Cricket</option>
+            <option>Football</option>
+            <option>Badminton</option>
+            <option>Basketball</option>
+        </select>
+
+        <select>
+            <option>Experience Level</option>
+            <option>Beginner</option>
+            <option>Intermediate</option>
+            <option>Advanced</option>
+        </select>
+
+        <input type="time">
+        <input type="text" placeholder="Medical Condition">
+        <input type="file">
+
+        <textarea placeholder="Address"></textarea>
+
+        <button type="submit">Register</button>
+        <button type="reset">Clear</button>
+    </form>
+</div>
+
+<!-- ANIMATION -->
+<div id="animation" class="section">
+    <h2>CSS Animation Demo</h2>
+
+    <div class="box">
+        <div class="ball vertical"></div>
+        <div class="ball horizontal"></div>
+    </div>
+</div>
+
+</body>
+</html>

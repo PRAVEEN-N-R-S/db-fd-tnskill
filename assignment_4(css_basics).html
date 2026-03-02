@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Sports Academy Student Registration Form</title>
+    <style>
+    /* General page styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f6f9;
+    margin: 0;
+    padding: 0;
+}
+
+/* Form heading */
+h1 {
+    text-align: center;
+    color: #1f4e79;
+    margin-top: 20px;
+}
+
+/* Form container */
+form {
+    width: 60%;
+    margin: 20px auto;
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Fieldset styling */
+fieldset {
+    border: 2px solid #1f4e79;
+    margin-bottom: 20px;
+    padding: 15px;
+}
+
+/* Legend styling */
+legend {
+    font-weight: bold;
+    color: #1f4e79;
+    padding: 0 10px;
+}
+
+/* Label spacing */
+label {
+    display: inline-block;
+    width: 180px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+/* Input, select, textarea */
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="date"],
+input[type="tel"],
+input[type="time"],
+select,
+textarea {
+    width: 60%;
+    padding: 8px;
+    margin-bottom: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Radio & checkbox */
+input[type="radio"],
+input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+/* Textarea */
+textarea {
+    resize: none;
+}
+
+/* Buttons */
+input[type="submit"],
+input[type="reset"] {
+    background-color: #1f4e79;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+/* Button hover effect */
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+    background-color: #163a59;
+}
+
+/* Center buttons */
+center {
+    margin-top: 20px;
+}
+</style>
+</head>
+
+<body>
+
+
+    <h1 align="center">Sports Academy Student Registration Form</h1>
+
+    <form>
+
+        <!-- Personal Details -->
+        <fieldset>
+            <legend><b>Personal Details</b></legend>
+
+            Full Name:
+            <input type="text" name="fullname" required><br><br>
+
+            Date of Birth:
+            <input type="date" name="dob"><br><br>
+
+            Gender:
+            <input type="radio" name="gender"> Male
+            <input type="radio" name="gender"> Female
+            <input type="radio" name="gender"> Other<br><br>
+
+            Age:
+            <input type="number" name="age"><br><br>
+
+            Blood Group:
+            <select name="bloodgroup">
+                <option>A+</option>
+                <option>A-</option>
+                <option>B+</option>
+                <option>B-</option>
+                <option>O+</option>
+                <option>O-</option>
+                <option>AB+</option>
+                <option>AB-</option>
+            </select>
+        </fieldset>
+
+        <br>
+
+        <!-- Contact Details -->
+        <fieldset>
+            <legend><b>Contact Details</b></legend>
+
+            Mobile Number:
+            <input type="tel" name="mobile"><br><br>
+
+            Email Address:
+            <input type="email" name="email"><br><br>
+
+            Address:<br>
+            <textarea rows="3" cols="40"></textarea><br><br>
+
+            City:
+            <input type="text" name="city"><br><br>
+
+            State:
+            <input type="text" name="state">
+        </fieldset>
+
+        <br>
+
+        <!-- Sports Information -->
+        <fieldset>
+            <legend><b>Sports Information</b></legend>
+
+            Sport Interested:
+            <select name="sport">
+                <option>Fencing</option>
+                <option>Cricket</option>
+                <option>Football</option>
+                <option>Badminton</option>
+                <option>Basketball</option>
+                <option>Athletics</option>
+                <option>Swimming</option>
+            </select><br><br>
+
+            Level of Experience:
+            <select name="experience">
+                <option>Beginner</option>
+                <option>Intermediate</option>
+                <option>Advanced</option>
+            </select><br><br>
+
+            Preferred Training Time:
+            <input type="time" name="time"><br><br>
+
+            Medical Condition (if any):
+            <input type="text" name="medical"><br><br>
+
+            Upload Passport Size Photo:
+            <input type="file" name="photo">
+        </fieldset>
+
+        <br>
+
+        <!-- Declaration -->
+        <fieldset>
+            <legend><b>Declaration</b></legend>
+
+            <input type="checkbox" required>
+            I hereby declare that the above information is true and correct.
+        </fieldset>
+
+        <br>
+
+        <!-- Buttons -->
+        <center>
+            <input type="submit" value="Register">
+            <input type="reset" value="Clear">
+        </center>
+
+    </form>
+
+</body>
+</html>
