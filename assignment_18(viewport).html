@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>device switching</title>
+
+    <!-- Viewport Meta Tag -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        header {
+            background: #4CAF50;
+            color: white;
+            padding: 20px;
+        }
+
+        nav {
+            background: #333;
+            padding: 10px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 10px;
+        }
+
+        .container {
+            padding: 20px;
+        }
+
+        .box {
+            background: lightgray;
+            padding: 20px;
+            margin: 10px;
+            display: inline-block;
+            width: 30%;
+        }
+
+        button {
+            padding: 10px 15px;
+            margin: 10px;
+            cursor: pointer;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .box {
+                width: 90%;
+                display: block;
+            }
+        }
+
+        /* Manual Mobile Mode */
+        .mobile-mode .box {
+            width: 90%;
+            display: block;
+        }
+
+        .mobile-mode nav a {
+            display: block;
+            margin: 5px 0;
+        }
+
+        .desktop-mode .box {
+            width: 30%;
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>view port</h1>
+</header>
+
+<nav>
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+</nav>
+
+<div class="container">
+    <button onclick="setMobile()">Switch to Mobile View</button>
+    <button onclick="setDesktop()">Switch to Desktop View</button>
+
+    <div class="box">1st option</div>
+    <div class="box">2nd option 2</div>
+    <div class="box">3rd option</div>
+</div>
+
+<script>
+    function setMobile() {
+        document.body.classList.remove("desktop-mode");
+        document.body.classList.add("mobile-mode");
+        alert("Switched to Mobile View");
+    }
+
+    function setDesktop() {
+        document.body.classList.remove("mobile-mode");
+        document.body.classList.add("desktop-mode");
+        alert("Switched to Desktop View");
+    }
+</script>
+
+</body>
+</html>
+
+
